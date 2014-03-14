@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="natemobile.apps.simpletodo.TodoActivity"
+    tools:ignore="MergeRootFrame" >
+
+        <ListView
+            android:id="@+id/lvItems"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" 
+            android:longClickable="true">
+        </ListView>
+
+
+            <EditText
+                android:id="@+id/etNewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/lvItems"
+                android:layout_below="@+id/lvItems"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                android:hint="@string/HintNewItemBlank" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btAddItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etNewItem"
+                android:layout_alignBottom="@+id/etNewItem"
+                android:layout_alignRight="@+id/lvItems"
+                android:onClick="addTodoItem"
+                android:text="@string/AddButton" />
+
+</RelativeLayout>
+
